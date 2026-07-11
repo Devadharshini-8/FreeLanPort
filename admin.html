@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Kaviyarasu V</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+<div class="grain"></div>
+
+<!-- ===== LOCK SCREEN ===== -->
+<div id="lockScreen" class="lock-screen">
+  <div class="lock-card">
+    <span class="brand-mark lock-mark">KV</span>
+    <h1>Admin Access</h1>
+    <p>Enter the 8-digit passcode to manage your portfolio content.</p>
+    <form id="lockForm" autocomplete="off">
+      <input type="password" inputmode="numeric" pattern="[0-9]*" maxlength="8" id="passcodeInput" placeholder="••••••••" autofocus>
+      <button type="submit" class="btn btn-primary btn-block">Unlock</button>
+    </form>
+    <p class="lock-error" id="lockError"></p>
+    <a href="index.html" class="lock-back">← Back to site</a>
+  </div>
+</div>
+
+<!-- ===== DASHBOARD ===== -->
+<div id="dashboard" class="dash hidden">
+
+  <aside class="dash-sidebar">
+    <a href="index.html" class="brand dash-brand">
+      <span class="brand-mark">KV</span>
+      <span class="brand-name">Kaviyarasu<em>.</em></span>
+    </a>
+    <nav class="dash-nav">
+      <button class="dash-nav-btn active" data-panel="projects">Projects &amp; Case Studies</button>
+      <button class="dash-nav-btn" data-panel="services">Services</button>
+      <button class="dash-nav-btn" data-panel="stack">Tech Stack</button>
+      <button class="dash-nav-btn" data-panel="settings">Settings</button>
+    </nav>
+    <div class="dash-sidebar-foot">
+      <a href="index.html" target="_blank" class="btn btn-ghost btn-small btn-block">View Live Site ↗</a>
+      <button id="lockBtn" class="btn btn-small btn-block dash-lock-btn">Lock Dashboard</button>
+    </div>
+  </aside>
+
+  <main class="dash-main">
+
+    <!-- PROJECTS PANEL -->
+    <section class="panel active" id="panel-projects">
+      <div class="panel-head">
+        <div>
+          <span class="tag">Projects &amp; Case Studies</span>
+          <h2 class="h2">Manage your work</h2>
+        </div>
+        <button class="btn btn-primary" id="addProjectBtn">+ Add Project</button>
+      </div>
+      <div class="admin-list" id="projectsList"></div>
+    </section>
+
+    <!-- SERVICES PANEL -->
+    <section class="panel" id="panel-services">
+      <div class="panel-head">
+        <div>
+          <span class="tag">Services</span>
+          <h2 class="h2">What you offer</h2>
+        </div>
+        <button class="btn btn-primary" id="addServiceBtn">+ Add Service</button>
+      </div>
+      <div class="admin-list" id="servicesList"></div>
+    </section>
+
+    <!-- STACK PANEL -->
+    <section class="panel" id="panel-stack">
+      <div class="panel-head">
+        <div>
+          <span class="tag">Tech Stack</span>
+          <h2 class="h2">Tools you use</h2>
+        </div>
+      </div>
+      <div class="stack-editor" id="stackEditor"></div>
+    </section>
+
+    <!-- SETTINGS PANEL -->
+    <section class="panel" id="panel-settings">
+      <div class="panel-head">
+        <div>
+          <span class="tag">Settings</span>
+          <h2 class="h2">Dashboard settings</h2>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <h3>Change Passcode</h3>
+        <p>Must be exactly 8 digits.</p>
+        <form id="changePassForm">
+          <label>Current passcode <input type="password" inputmode="numeric" maxlength="8" id="curPass" required></label>
+          <label>New passcode <input type="password" inputmode="numeric" maxlength="8" id="newPass" required></label>
+          <label>Confirm new passcode <input type="password" inputmode="numeric" maxlength="8" id="confirmPass" required></label>
+          <button type="submit" class="btn btn-primary">Update Passcode</button>
+          <p class="settings-msg" id="passMsg"></p>
+        </form>
+      </div>
+
+      <div class="settings-card danger">
+        <h3>Reset All Content</h3>
+        <p>This restores Projects, Services and Tech Stack to their original defaults. Your passcode is not affected.</p>
+        <button class="btn btn-ghost" id="resetBtn">Reset to Defaults</button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ===== SHARED MODAL ===== -->
+<div class="modal-overlay hidden" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="modalTitle">Add Item</h3>
+      <button class="modal-close" id="modalClose">×</button>
+    </div>
+    <form id="modalForm"></form>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

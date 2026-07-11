@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaviyarasu V — Full Stack Developer &amp; Freelancer</title>
+<meta name="description" content="Kaviyarasu V — Full stack developer building websites, admin dashboards and mobile apps for small businesses and startups.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Grain / paper texture overlay -->
+<div class="grain"></div>
+
+<!-- ===== NAV ===== -->
+<header class="topbar" id="topbar">
+  <div class="wrap topbar-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark">KV</span>
+      <span class="brand-name">Kaviyarasu<em>.</em></span>
+    </a>
+
+    <nav class="tabs" id="tabs">
+      <a href="#home" class="tab active">Home</a>
+      <a href="#about" class="tab">About</a>
+      <a href="#services" class="tab">Services</a>
+      <a href="#stack" class="tab">Stack</a>
+      <a href="#work" class="tab">Work</a>
+      <a href="#contact" class="tab">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-small btn-primary nav-cta">Hire Me</a>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="dot"></span>Available for freelance projects</div>
+        <h1 class="display">Building web products<br> clients actually <span class="ink">trust.</span></h1>
+        <p class="lede">I'm Kaviyarasu — a full stack developer who designs, builds and ships websites, admin dashboards and mobile apps for small businesses, clinics and studios who need more than a template.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">View Case Studies</a>
+          <a href="#contact" class="btn btn-ghost">Start a Project →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">2+</span><span class="stat-label">Live Projects Shipped</span></div>
+          <div class="stat"><span class="stat-num">6+</span><span class="stat-label">Tech Stacks Used</span></div>
+          <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Responsive Builds</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <!-- Front Card -->
+        <div class="stamp-card">
+          <div class="stamp-browser">
+            <div class="stamp-browser-bar"><i></i><i></i><i></i></div>
+            <div class="stamp-browser-body" style="padding: 0;">
+              <img src="assets/hero.jpg" alt="Hero Project" style="width: 100%; display: block; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+        <!-- Back Card -->
+        <div class="stamp-card stamp-card-back">
+          <div class="stamp-browser">
+            <div class="stamp-browser-bar"><i></i><i></i><i></i></div>
+            <div class="stamp-browser-body" style="padding: 0;">
+              <img src="assets/back.jpg" alt="Back Project" style="width: 100%; display: block; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="about-top reveal">
+        <h2 class="h2">A developer who treats every build like it's going into production for a real client — because it usually is.</h2>
+        <p class="p-lg">I work across the stack — from pixel-accurate frontends to the admin panels that let non-technical owners run their own site without calling me every time they need a text change. My focus is small businesses, clinics, studios and independent professionals who need a website that looks premium and actually converts visitors into enquiries.</p>
+      </div>
+      <div class="about-cards reveal">
+        <div class="mini-card">
+          <h3>What I build</h3>
+          <p>Marketing sites, booking flows, admin dashboards, and full-stack web apps — end to end.</p>
+        </div>
+        <div class="mini-card">
+          <h3>How I work</h3>
+          <p>Clear scope, weekly updates, and a handover doc so you're never locked out of your own site.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Why it matters</h3>
+          <p>Every project ships with responsive layouts, clean code and room to grow — no throwaway builds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="section section-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="h2">What I can do for you</h2>
+      </div>
+      <div class="grid-3 reveal" id="servicesGrid"><!-- rendered from data.js / admin dashboard --></div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE ME ===== -->
+  <section class="section why">
+    <div class="wrap why-grid">
+      <div class="reveal">
+        <h2 class="h2">Reasons clients choose to work with me</h2>
+        <p class="p-lg">Freelancing means the work has to speak for itself. Here's what I hold every project to.</p>
+      </div>
+      <ul class="checklist reveal">
+        <li><span class="check">✓</span> Fully responsive, mobile-first design</li>
+        <li><span class="check">✓</span> Fast-loading, optimised builds</li>
+        <li><span class="check">✓</span> SEO-friendly page structure</li>
+        <li><span class="check">✓</span> Clean, maintainable code</li>
+        <li><span class="check">✓</span> Transparent timelines &amp; communication</li>
+        <li><span class="check">✓</span> Post-launch support included</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== TECH STACK ===== -->
+  <section id="stack" class="section section-alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="h2">Tools of the trade</h2>
+      </div>
+      <div class="stack-grid reveal" id="stackGrid"><!-- rendered from data.js / admin dashboard --></div>
+    </div>
+  </section>
+
+  <!-- ===== WORK / CASE STUDIES ===== -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="h2">Case studies</h2>
+        <p class="p-lg">A closer look at the problem, the build, and the outcome for each project.</p>
+      </div>
+
+      <div class="case-list" id="caseList"><!-- rendered from data.js / admin dashboard --></div>
+
+     
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section-dark">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <h2 class="h2 h2-light">Have a project in mind?<br>Let's talk.</h2>
+        <p class="p-lg p-light">Tell me a bit about what you're building and I'll get back to you within a day or two.</p>
+
+        <div class="contact-info">
+          <a href="tel:+918940662554" class="contact-row">
+            <span class="contact-label">Phone</span>
+            <span>+91 89406 62554</span>
+          </a>
+          <a href="mailto:kaviyarasu.dev@gmail.com" class="contact-row">
+            <span class="contact-label">Email</span>
+            <span>dharshinimaha2004@gmail.com</span>
+          </a>
+          <div class="contact-row">
+            <span class="contact-label">Location</span>
+            <span>Tamil Nadu, India</span>
+          </div>
+        </div>
+
+        
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <label>Name <input type="text" name="name" placeholder="Your name" required></label>
+        <label>Email <input type="email" name="email" placeholder="you@example.com" required></label>
+        <label>Project details <textarea name="message" rows="4" placeholder="Tell me about your project..." required></textarea></label>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-social">
+      <a href="https://github.com/vkavi0607" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+        <img src="assets/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/kaviyarasu-v-3853473a2" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+        <img src="assets/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:dharshinimaha2004@gmail.com" class="social-icon" aria-label="Email">
+        <img src="assets/email.png" alt="Email">
+      </a>
+    </div>
+    <span class="footer-copy">© <span id="year"></span> All rights reserved. | Designed & developed independently.</span>
+    <div class="footer-links">
+      <a href="admin.html" class="admin-link">Admin ↗</a>
+      <a href="#home" class="back-top">Back ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
